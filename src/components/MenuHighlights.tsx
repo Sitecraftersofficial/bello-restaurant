@@ -32,11 +32,11 @@ const MenuHighlights = () => {
 
         <div className="max-w-6xl mx-auto">
           <Tabs defaultValue="signature" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger value="signature" className="text-lg py-3">
+            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 mb-8 gap-2 sm:gap-0 h-auto sm:h-10 p-1">
+              <TabsTrigger value="signature" className="text-base sm:text-lg py-3 sm:py-3 w-full">
                 🍗 Signature Dishes
               </TabsTrigger>
-              <TabsTrigger value="drinks" className="text-lg py-3">
+              <TabsTrigger value="drinks" className="text-base sm:text-lg py-3 sm:py-3 w-full">
                 🍸 Drinks & Offerings
               </TabsTrigger>
             </TabsList>

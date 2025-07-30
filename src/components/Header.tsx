@@ -91,7 +91,7 @@ const Header = () => {
                 <Menu size={24} />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80 bg-background">
+            <SheetContent side="right" className="w-80 bg-black border-border">
               <div className="flex flex-col gap-6 pt-8">
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-2xl">🍽</span>
