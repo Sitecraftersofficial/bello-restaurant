@@ -2,8 +2,15 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-restaurant.jpg";
 
 const RestaurantHero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -28,12 +35,17 @@ const RestaurantHero = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-warm-orange hover:bg-terracotta text-cream font-semibold px-8 py-3 rounded-full shadow-warm transition-all duration-300 transform hover:scale-105">
+          <Button 
+            size="lg" 
+            onClick={() => scrollToSection('menu')}
+            className="bg-warm-orange hover:bg-terracotta text-cream font-semibold px-8 py-3 rounded-full shadow-warm transition-all duration-300 transform hover:scale-105"
+          >
             View Full Menu
           </Button>
           <Button 
             variant="outline" 
             size="lg" 
+            onClick={() => scrollToSection('contact')}
             className="border-2 border-cream text-cream hover:bg-cream hover:text-deep-brown font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
           >
             Reserve a Table

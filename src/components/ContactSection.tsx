@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-gradient-section">
+    <section id="contact" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -39,17 +40,8 @@ const ContactSection = () => {
             </Card>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-warm-orange hover:bg-terracotta text-cream font-semibold px-8 py-3 rounded-full shadow-warm transition-all duration-300 transform hover:scale-105">
-              Reserve Your Table
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-warm-orange text-warm-orange hover:bg-warm-orange hover:text-cream font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              Send a Message
-            </Button>
+          <div className="mb-12">
+            <ContactForm />
           </div>
           
           <div className="mt-12 pt-8 border-t border-border">
