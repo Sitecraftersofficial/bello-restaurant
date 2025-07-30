@@ -99,7 +99,7 @@ const Footer = () => {
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-muted-foreground text-sm">
-              © 2024 The Bello Restaurant. All rights reserved.
+              © 2025 The Bello Restaurant. All rights reserved.
             </p>
             <p className="text-accent text-sm">
               Made with ❤️ in Rwanda by the{" "}
