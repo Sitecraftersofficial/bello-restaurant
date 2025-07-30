@@ -87,7 +87,11 @@ const Header = () => {
           {/* Mobile Menu - Sidebar */}
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
-              <button className="lg:hidden p-2 text-foreground hover:text-warm-orange transition-colors duration-300">
+              <button
+                className="lg:hidden p-2 text-foreground hover:text-warm-orange transition-colors duration-300"
+                aria-label="Open menu"
+                title="Open menu"
+              >
                 <Menu size={24} />
               </button>
             </SheetTrigger>

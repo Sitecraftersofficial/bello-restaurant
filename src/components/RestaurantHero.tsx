@@ -16,7 +16,7 @@ const RestaurantHero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-brown/80 via-deep-brown/60 to-warm-orange/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-brown/80 via-deep-brown/60 to-warm-orange/50" />
       </div>
       
       {/* Content */}
@@ -27,7 +27,7 @@ const RestaurantHero = () => {
             <span className="text-gold-accent">Restaurant</span>
           </h1>
           <p className="text-xl md:text-2xl mb-2 text-cream/90 font-medium">
-            Ozix Beverage & Food – Kicukiro, Kigali
+            Ozix Beverage & Food – Kigali
           </p>
           <p className="text-lg md:text-xl text-cream/80 italic">
             Where every bite tells a story

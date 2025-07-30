@@ -54,7 +54,7 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-warm-orange hover:text-terracotta font-semibold transition-colors duration-300"
             >
-              🌍 Read Reviews on Google Maps
+              🌍 Click here to read our Google Reviews
             </a>
           </div>
         </div>
