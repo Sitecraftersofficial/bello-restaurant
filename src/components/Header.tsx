@@ -24,7 +24,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection('home')}
               className="text-foreground hover:text-warm-orange transition-colors duration-300"
@@ -72,7 +72,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-warm-orange transition-colors duration-300"
+            className="lg:hidden p-2 text-foreground hover:text-warm-orange transition-colors duration-300"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -80,7 +80,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-lg">
+          <div className="lg:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-lg">
             <nav className="flex flex-col p-6 gap-4">
               <button 
                 onClick={() => scrollToSection('home')}
