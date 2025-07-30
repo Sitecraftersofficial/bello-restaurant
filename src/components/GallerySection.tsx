@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import image1 from "../assets/hero-restaurant.jpg";
+import image2 from "../assets/food1.webp";
+import image3 from "../assets/food2.webp";
+import image4 from "../assets/food3.webp";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -7,39 +11,27 @@ const GallerySection = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=800&q=80",
-      alt: "Signature dish presentation",
-      title: "Signature Dishes"
+      src: image1,
+      alt: "Our Place",
+      title: "Our Place"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80",
-      alt: "Cozy restaurant interior",
-      title: "Elegant Atmosphere"
+      src: image4,
+      alt: "Food",
+      title: "Delicious Food"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80",
-      alt: "Chef at work",
-      title: "Culinary Excellence"
+      src: image3,
+      alt: "Food",
+      title: "Roll"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=800&q=80",
+      src: image2,
       alt: "Fine dining experience",
       title: "Fine Dining"
-    },
-    {
-      id: 5,
-      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
-      alt: "Fresh ingredients",
-      title: "Fresh Ingredients"
-    },
-    {
-      id: 6,
-      src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
-      alt: "Kitchen craftsmanship",
-      title: "Kitchen Craftsmanship"
     }
   ];
 
@@ -102,6 +94,8 @@ const GallerySection = () => {
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-white hover:text-muted-foreground transition-colors z-10"
+              title="Close modal"
+              aria-label="Close modal"
             >
               <X size={32} />
             </button>
@@ -109,6 +103,7 @@ const GallerySection = () => {
             <button
               onClick={prevImage}
               className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-muted-foreground transition-colors"
+              title="Previous image"
             >
               <ChevronLeft size={48} />
             </button>
@@ -116,6 +111,7 @@ const GallerySection = () => {
             <button
               onClick={nextImage}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-muted-foreground transition-colors"
+              title="Next image"
             >
               <ChevronRight size={48} />
             </button>
