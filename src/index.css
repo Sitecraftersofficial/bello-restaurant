@@ -72,46 +72,46 @@
   }
 
   .dark {
-    --background: 25 30% 8%;
-    --foreground: 35 25% 92%;
+    --background: 20 25% 12%;
+    --foreground: 45 30% 95%;
 
-    --card: 25 25% 12%;
-    --card-foreground: 35 25% 92%;
+    --card: 20 30% 15%;
+    --card-foreground: 45 25% 95%;
 
-    --popover: 25 25% 12%;
-    --popover-foreground: 35 25% 92%;
+    --popover: 20 30% 15%;
+    --popover-foreground: 45 25% 95%;
 
-    --primary: 20 85% 55%;
-    --primary-foreground: 25 30% 8%;
+    --primary: 25 90% 60%;
+    --primary-foreground: 20 25% 12%;
 
-    --secondary: 25 15% 20%;
-    --secondary-foreground: 35 25% 92%;
+    --secondary: 15 40% 25%;
+    --secondary-foreground: 45 25% 95%;
 
-    --muted: 25 15% 20%;
-    --muted-foreground: 35 15% 65%;
+    --muted: 20 25% 22%;
+    --muted-foreground: 45 20% 75%;
 
-    --accent: 20 70% 45%;
-    --accent-foreground: 35 25% 92%;
+    --accent: 35 85% 55%;
+    --accent-foreground: 20 25% 12%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 35 25% 92%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 45 25% 95%;
 
-    --border: 25 15% 20%;
-    --input: 25 15% 20%;
-    --ring: 20 85% 55%;
+    --border: 20 25% 25%;
+    --input: 20 25% 22%;
+    --ring: 25 90% 60%;
     
-    /* Dark mode restaurant tokens */
-    --warm-orange: 20 85% 55%;
-    --deep-brown: 25 40% 25%;
-    --cream: 25 30% 8%;
-    --terracotta: 15 70% 60%;
-    --gold-accent: 45 85% 65%;
+    /* Vibrant dark mode restaurant tokens */
+    --warm-orange: 25 90% 60%;
+    --deep-brown: 15 50% 30%;
+    --cream: 45 30% 95%;
+    --terracotta: 10 85% 65%;
+    --gold-accent: 50 95% 70%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(20 85% 55%), hsl(15 70% 60%));
-    --gradient-section: linear-gradient(180deg, hsl(25 30% 8%), hsl(25 15% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 90% 60%), hsl(10 85% 65%));
+    --gradient-section: linear-gradient(180deg, hsl(20 25% 12%), hsl(20 25% 18%));
     
-    --shadow-warm: 0 10px 30px -10px hsl(20 85% 55% / 0.4);
-    --shadow-soft: 0 4px 20px -4px hsl(25 40% 25% / 0.3);
+    --shadow-warm: 0 15px 40px -12px hsl(25 90% 60% / 0.5);
+    --shadow-soft: 0 8px 25px -6px hsl(15 50% 30% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
