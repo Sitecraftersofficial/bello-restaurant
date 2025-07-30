@@ -95,43 +95,43 @@ const Header = () => {
               <div className="flex flex-col gap-6 pt-8">
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-2xl">🍽</span>
-                  <span className="text-xl font-bold text-foreground">The Bello Restaurant</span>
+                  <span className="text-xl font-bold text-white">The Bello Restaurant</span>
                 </div>
                 
                 <nav className="flex flex-col gap-6">
                   <button 
                     onClick={() => scrollToSection('home')}
-                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                    className="text-left text-lg text-white hover:text-warm-orange transition-colors duration-300"
                   >
                     Home
                   </button>
                   <button 
                     onClick={() => scrollToSection('about')}
-                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                    className="text-left text-lg text-white hover:text-warm-orange transition-colors duration-300"
                   >
                     About
                   </button>
                   <button 
                     onClick={() => scrollToSection('menu')}
-                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                    className="text-left text-lg text-white hover:text-warm-orange transition-colors duration-300"
                   >
                     Menu
                   </button>
                   <button 
                     onClick={() => scrollToSection('services')}
-                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                    className="text-left text-lg text-white hover:text-warm-orange transition-colors duration-300"
                   >
                     Services
                   </button>
                   <button 
                     onClick={() => scrollToSection('location')}
-                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                    className="text-left text-lg text-white hover:text-warm-orange transition-colors duration-300"
                   >
                     Location
                   </button>
                   <button 
                     onClick={() => scrollToSection('contact')}
-                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                    className="text-left text-lg text-white hover:text-warm-orange transition-colors duration-300"
                   >
                     Contact
                   </button>
