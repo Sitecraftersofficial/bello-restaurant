@@ -1,12 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import RestaurantHero from "@/components/RestaurantHero";
+import AboutSection from "@/components/AboutSection";
+import MenuHighlights from "@/components/MenuHighlights";
+import LocationSection from "@/components/LocationSection";
+import ServicesSection from "@/components/ServicesSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <RestaurantHero />
+      <AboutSection />
+      <MenuHighlights />
+      <ServicesSection />
+      <LocationSection />
+      <ContactSection />
     </div>
   );
 };
