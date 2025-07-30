@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import image1 from "../assets/hero-restaurant.jpg";
-import image2 from "../assets/food1.webp";
-import image3 from "../assets/food2.webp";
-import image4 from "../assets/food3.webp";
+import image2 from "../assets/food1.jpg";
+import image3 from "../assets/food2.jpg";
+import image4 from "../assets/food3.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
