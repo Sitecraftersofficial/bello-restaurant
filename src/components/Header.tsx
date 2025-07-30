@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Prevent page scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -69,64 +84,68 @@ const Header = () => {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-warm-orange transition-colors duration-300"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu - Sidebar */}
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <SheetTrigger asChild>
+              <button className="lg:hidden p-2 text-foreground hover:text-warm-orange transition-colors duration-300">
+                <Menu size={24} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-80 bg-background">
+              <div className="flex flex-col gap-6 pt-8">
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="text-2xl">🍽</span>
+                  <span className="text-xl font-bold text-foreground">The Bello Restaurant</span>
+                </div>
+                
+                <nav className="flex flex-col gap-6">
+                  <button 
+                    onClick={() => scrollToSection('home')}
+                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                  >
+                    Home
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('about')}
+                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                  >
+                    About
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('menu')}
+                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                  >
+                    Menu
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('services')}
+                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                  >
+                    Services
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('location')}
+                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                  >
+                    Location
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="text-left text-lg text-foreground hover:text-warm-orange transition-colors duration-300"
+                  >
+                    Contact
+                  </button>
+                  <Button 
+                    onClick={() => scrollToSection('contact')}
+                    className="bg-warm-orange hover:bg-terracotta text-cream mt-4 w-full"
+                  >
+                    Reserve Table
+                  </Button>
+                </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-lg">
-            <nav className="flex flex-col p-6 gap-4">
-              <button 
-                onClick={() => scrollToSection('home')}
-                className="text-left text-foreground hover:text-warm-orange transition-colors duration-300"
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-left text-foreground hover:text-warm-orange transition-colors duration-300"
-              >
-                About
-              </button>
-              <button 
-                onClick={() => scrollToSection('menu')}
-                className="text-left text-foreground hover:text-warm-orange transition-colors duration-300"
-              >
-                Menu
-              </button>
-              <button 
-                onClick={() => scrollToSection('services')}
-                className="text-left text-foreground hover:text-warm-orange transition-colors duration-300"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => scrollToSection('location')}
-                className="text-left text-foreground hover:text-warm-orange transition-colors duration-300"
-              >
-                Location
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="text-left text-foreground hover:text-warm-orange transition-colors duration-300"
-              >
-                Contact
-              </button>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-warm-orange hover:bg-terracotta text-cream mt-2"
-              >
-                Reserve Table
-              </Button>
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   );
